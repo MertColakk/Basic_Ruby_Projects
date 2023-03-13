@@ -1,46 +1,46 @@
-def Toplama(n1,n2)
+def Sum(n1,n2)
   return n1+n2
 end
 
-def Cikarma(n1,n2)
+def Extraction(n1,n2)
   return n1-n2
 end
 
-def Carpma(n1,n2)
+def Multiplication(n1,n2)
   return n1*n2
 end
 
-def Bolme(n1,n2)
+def Division(n1,n2)
   if n2 == 0
-    return "Bir sayı sıfıra bölünemez"
+    return "A number can't divide to zero"
   else
     return n1/n2.to_f
   end
 end
 
-puts "Lütfen işlem seçiniz (+,-,*,/)"
+puts "Please select an operation (+,-,*,/)"
 operation = gets.chomp
 
 if operation != "+" && operation != '-' && operation != '*' && operation != '/'
-  puts "Geçersiz işlem"
+  puts "Invalid operation.."
 else
-  puts "Lütfen ilk sayıyı giriniz: "
+  puts "Please enter the first number: "
   n1 = gets.chomp.to_f
-  puts "Lütfen ikinci sayıyı giriniz: "
+  puts "Please enter the second number: "
   n2 = gets.chomp.to_f
 end
 
 case operation
 when "+"
-  sonuc = Toplama(n1,n2)
-  puts "Sonuç: #{sonuc}"
+  result = Sum(n1,n2)
+  puts "Result: #{result}"
 when "-"
-  sonuc = Cikarma(n1,n2)
-  puts "Sonuç: #{sonuc}"
+  result = Extraction(n1,n2)
+  puts "Result: #{result}"
 when "*"
-  sonuc = Carpma(n1,n2)
-  puts "Sonuç: #{sonuc}"
+  result = Multiplication(n1,n2)
+  puts "Result: #{result}"
 when "/"
-  sonuc = Bolme(n1,n2)
-  puts "Sonuç: #{sonuc}"
+  result = Division(n1,n2)
+  puts "Result: #{result}"
 end
