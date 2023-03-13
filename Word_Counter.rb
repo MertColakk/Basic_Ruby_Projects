@@ -1,10 +1,10 @@
-puts "Lütfen dosyanın tam konumunu giriniz: "
+puts "Please enter the full path of file: "
 file_path = gets.chomp
 
 if File.exists?(file_path)
   text = File.read(file_path)
   word_count = text.split.length
-  puts "Dosyada toplam #{word_count} kelime var."
+  puts "The file contains #{word_count} word/words."
 else
-  puts "Dosya bulunamadı"
+  puts "File not found."
 end
